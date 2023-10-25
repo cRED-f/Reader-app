@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import BackgroundColor from "@/components/BackgroundColor";
 import Provider from "@/components/Provider";
 import "react-loading-skeleton/dist/skeleton.css";
+import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <Provider>
         <body className={inter.className}>
+          <Toaster />
           <Navbar />
           <BackgroundColor>{children}</BackgroundColor>
         </body>
